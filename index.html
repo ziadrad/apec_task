@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APEC</title>
+    <link rel="shortcut icon" href="imgs/APEC1.png" type="image/">
+    <link rel="stylesheet" href="style/all.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/css.main.css">
+
+</head>
+<body class="p-4 h-100">
+    <div class="container d-flex flex-column ">
+        <div class="d-flex gap-0 mt-4  mx-auto flex-row justify-content-center align-items-center w-25 flex-grow-1 ">
+            <div> <img src="imgs/apecLogo.png" class="logo_animation " alt="APEC Logo">
+            </div>
+            <div> <img src="imgs/APEC1.png" class=" apec_logo" alt="APEC">
+            </div>
+        </div>
+
+  <!--  step progress  -->
+        <div id ='step_progress' class="row justify-content-center ">
+            <div class="Step_bar col-12  justify-content-center  ">
+              <ul id="Stepbar">
+                <li class="Step active ">Welcome</li>
+                <li class="Step "></li>
+                <li class="Step"></li>
+                <li class="Step"></li>
+                <li class="Step">end</li>
+              </ul>
+            </div>
+          </div>
+          <div class="d-flex rec flex-column justify-content-center align-items-center pt-5">
+<h2 class="text-uppercase subhead text-white mb-0 pb-0">APEC'25</h2>
+<h2 class="subhead text-uppercase text-main-color ">Recruitment</h2>
+          </div>
+          <div class="row justify-content-center">
+            <div class="content w-75">
+              <!-- first step  -->
+              <div id="step 1" class="">
+                <div class="text text-white">
+                  <h3 class="text-capitalize">registration Instructions : </h3>
+                  <p class="ms-4 mt-3">
+                    -<br>
+                    -<br>
+                    -<br>
+                  </p>
+                </div>
+                <div class="btns d-flex justify-content-end ">
+                  <button type="button" onclick="Next_btn(this.id,this)" id="next1" class="btn main-btn ms-auto me-3">Next</button>
+                </div>
+              </div>
+            <!-- second step  -->
+
+              <div id="step 2" class="d-none">
+                <div class="text text-white">
+                  <h3 class="text-capitalize">registration Form : </h3>
+                  <form>
+                    <div class="my-3">
+                      <label for="InputName" class="form-label">Your Name :</label>
+                      <input type="text" class="form-control bg-transparent border-dark-subtle text-white" id="InputName" aria-describedby="NameHelp">
+                      <div id="NameHelp" class="form-text d-none  text-warning">Please enter Your Name</div>
+                    </div>
+                    <div class="my-3">
+                      <label for="InputEmail" class="form-label">Email address</label>
+                      <input type="email" class="form-control bg-transparent border-dark-subtle text-white" id="InputEmail" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text text-warning d-none ">Please enter Valid Email Address</div>
+                    </div>
+                    <hr />
+Choose Faculty :
+                    <select id="Faculty" name="Faculty" onchange="populate(this.id,'AC_Year')">
+                      <option value=""></option>
+                      <option value="Engineering">Engineering</option>
+                      <option value="Medicine">Medicine</option>
+                      <option value="computer science">computer science</option>
+                    </select>
+                    <hr />
+                    Choose Academic Year :
+                    <select id="AC_Year" name="AC_Year"><option value=""></option><option value="1st Year">1st Year</option><option value="2nd Year">2nd Year</option><option value="3rd Year">3rd Year</option><option value="4th Year">4th Year</option></select>  <hr />
+                 
+                  </form>
+                  </p>
+                </div>
+                <div class="btns d-flex justify-content-end ">
+                  <button type="button"  onclick="Prev_btn(this)" class="btn main-btn me-3">PREV</button>
+                  <button type="button" onclick="Next_btn(this.id,this)"  id="next2" class="btn main-btn me-3">Next</button>
+                </div>
+              </div>
+               <!-- third step  -->
+              <div id="step 3" class=" d-none">
+                <div class="btns d-flex justify-content-end ">
+                  <button type="button"  onclick="Prev_btn(this)" class="btn main-btn me-3">PREV</button>
+                  <button type="button" onclick="Next_btn(this.id,this)"  id="next2" class="btn main-btn me-3">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script src="js/main.js"></script>
+          <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

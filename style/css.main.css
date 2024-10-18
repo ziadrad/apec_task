@@ -1,0 +1,122 @@
+@keyframes LogoAnim {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+}
+:root{
+    --main_color:rgb(173, 9, 9);
+    --dark_main_color:#5f0b0b;
+}
+
+.text-main-color{
+color: var(--main_color);
+}
+
+body{
+    background: linear-gradient(to bottom, #4c4c4c 10%, #540a0a 80%, #981515 90%);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+.logo_animation{
+    animation: LogoAnim 3s linear infinite;
+    width: 5rem;
+}
+.apec_logo{
+    width: 10rem;
+}
+
+#Stepbar{
+    margin: 0 25px;
+    padding: 0;
+    counter-reset: step;
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+}
+#Stepbar li {
+    list-style-type: none;
+    color: #ddd;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 20%;
+text-align: center;
+    float: left;
+    position: relative;
+}
+#Stepbar li::before{
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    text-align: center;
+    line-height: 20px;
+    display: block;
+    font-size: 13px;
+    color: #222;
+    background: #ddd;
+    border-radius: 3px;
+    margin: 0 auto 10px auto;
+
+}
+#Stepbar li::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #ddd;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1;
+    transition: all 0.5s;
+
+}
+/* remove line from first element  */
+#Stepbar li:first-child::after{
+    content: none;
+}
+#Stepbar li.active::before , #Stepbar li.active::after {
+    background-color: red;
+    color: #ddd;
+}
+.Step_bar{
+    margin-top: 4rem;
+}
+.rec{
+    margin-top: 2rem;
+}
+.subhead{
+    font-size: 2.2rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+.content{
+    padding: 2em;
+    margin-top: 2em;
+    margin-bottom: 5em;
+    background: none;
+    background: rgba(165, 162, 162, 0.4);
+    border: 2px solid rgba(165, 162, 162, 1);
+    border-radius: 1em;
+}
+.main-btn{
+    width: 10rem;
+    background-color: var(--main_color);
+    border-radius: 3;
+    color: white;
+}
+.main-btn:hover{
+    background-color: var(--dark_main_color);
+    color: white;
+}
+.form-label{
+    font-size: large;
+}
+
+
